@@ -1,0 +1,126 @@
+/* The css for the top bar on the page. */
+.top {
+	font-size:14px;
+	color: #455266;
+	background-image: linear-gradient(to bottom, #FFF, #FFF);
+	margin-bottom: 10px;
+	box-shadow: 0px 2px 12px 0px rgba(35, 53, 152, 1);
+	padding: 20px 40px;
+	font-size: 50px;
+	text-align: center;
+	text-shadow: 1px 1px 2px black; 
+    border: 1px solid #4E7AC7;
+}
+
+/* The css for the two different layouts. */
+#image1 {
+	height: 750px;
+	width: 1350px;
+	border-style: double; 
+	border-width: 5px; 
+	border-color: solid black; 
+	text-align: center;
+	display: block; 
+	margin: auto;
+	box-shadow: 0px 2px 12px 0px rgba(35, 53, 152, 1);
+	background : url("../docs/page1.png") no-repeat;
+	background-size: cover;
+	padding: 20px;
+	position: relative;
+
+}
+
+#image2 {
+	height: 750px;
+	width: 1350px;
+	border-style: double; 
+	border-width: 5px; 
+	border-color: solid black; 
+	text-align: center;
+	display: block; 
+	margin: auto;
+	box-shadow: 0px 2px 12px 0px rgba(35, 53, 152, 1);
+	background : url("../docs/page2.png") no-repeat;
+	background-size: cover;
+	padding: 20px;
+	position: relative;
+}
+
+/* Css for the individual boxes */
+.box {
+	margin: 30px;
+	font-size: 15px;
+	font-family: arial;
+	cursor: default;
+	text-align: center;
+}
+
+.box .text {
+	text-align: center;
+	font-size: 15px;
+	padding: 4px;
+}
+
+.box:hover .text a{
+	opacity: .3;
+}
+
+.box .hover {
+  text-align: left; 
+  position: relative; 
+  max-width: 300px;
+  
+  box-shadow: 0px 2px 12px 0px rgba(35, 53, 152, 1);
+  display: none;
+
+  background-image: linear-gradient(to top, #DFF4FF 0%, #4E7AC7 75%, #08d3e2 100%);
+  border-style: solid;
+  border-width: 2px;
+  padding: 4px;
+  border-color: solid black;
+  border-radius: 10px;
+ 
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+}
+
+.box .text:hover  + .hover, .hover:hover {
+  display: block;
+  z-index: 1; 
+  
+  -webkit-animation-name: hvr-push;
+  animation-name: hvr-push;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+button {
+	  box-shadow: 0px 2px 12px 0px rgba(35, 53, 152, 1);
+}
+
+
+/* Animation for the boxes */
+@-webkit-keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
